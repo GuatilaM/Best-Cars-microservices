@@ -23,5 +23,7 @@ from django.conf import settings
 urlpatterns = [
     # path('reviews/', include('reviews.urls')),
     path('', TemplateView.as_view(template_name='home.html')),
+    path('about/', TemplateView.as_view(template_name='about.html')),
+    path('contact/', TemplateView.as_view(template_name='contact.html')),
     path('admin/', admin.site.urls),
 ] + static(settings.STATIC_URL, document_root=settings.STATICFILES_DIRS)
